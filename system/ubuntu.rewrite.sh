@@ -70,9 +70,15 @@ git config --global core.pager cat
 # Oh-My-Bash
 git clone https://github.com/ohmybash/oh-my-bash.git ~/.oh-my-bash
 cd ~/.oh-my-bash/themes && mv rr .rr && rm -rf * && mv .rr rr
-sed -i '27s/\(${.*} \) \(${.*} \)\$/\2\1$/' ~/.oh-my-bash/themes/rr/rr.theme.sh
-sed -i '36s/}/  PS1+="\\n$ "\n}/' ~/.oh-my-bash/themes/rr/rr.theme.sh
+sed -i '27s/\(${.*} \) \(${.*} \)\$/\2\1$/' rr/rr.theme.sh
+sed -i '36s/}/  PS1+="\\n$ "\n}/' rr/rr.theme.sh
 cp ~/.oh-my-bash/templates/bashrc.osh-template ~/.bashrc
 sed -i '12s/font/rr/' ~/.bashrc
+
+# My-Things
+git clone https://github.com/brianlewyn/share.git ~/.my-things
+cd ~/.my-things/ubuntu && mv .fonts ~ && mv .icons ~ && mv .themes ~
+mv profile.jpg ~/Pictures && mv wallper.png ~/Pictures
+cd ~ && rm -rf ~/.my-things
 
 echo "\nscript done! now run 'source ~/.bashrc'"
