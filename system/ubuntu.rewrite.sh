@@ -37,8 +37,6 @@ echo \
 "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
 sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-curl -o ~/Downloads/docker.deb https://desktop.docker.com/linux/main/amd64/docker-desktop-4.21.1-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64
-sudo apt-get update
 #sudo apt-get install ./docker-desktop-<version>-amd64.deb
 systemctl --user start docker-desktop
 systemctl --user enable docker-desktop
