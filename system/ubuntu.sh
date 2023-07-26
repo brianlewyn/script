@@ -24,28 +24,28 @@ sudo apt update
 sudo apt install keepassxc
 
 # VSCode
-curl -o ~/Downloads/vscode.deb https://code.visualstudio.com/download
-sudo apt install ~/Downloads/./vscode.deb
+#curl -o ~/Downloads/vscode.deb https://code.visualstudio.com/download
+#sudo apt install ~/Downloads/./vscode.deb
 
 # Docker
-sudo apt-get update
-sudo apt-get install ca-certificates gnupg
-sudo install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
-echo \
-"deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-"$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
-sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-curl -o ~/Downloads/docker.deb https://desktop.docker.com/linux/main/amd64/docker-desktop-4.21.1-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64
-sudo apt-get update
-sudo apt-get install ~/Downloads/./docker.deb
-systemctl --user start docker-desktop
-systemctl --user enable docker-desktop
+#sudo apt-get update
+#sudo apt-get install ca-certificates gnupg
+#sudo install -m 0755 -d /etc/apt/keyrings
+#curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+#sudo chmod a+r /etc/apt/keyrings/docker.gpg
+#echo \
+#"deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+#"$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+#sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+#curl -o ~/Downloads/docker.deb https://desktop.docker.com/linux/main/amd64/docker-desktop-4.21.1-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64
+#sudo apt-get update
+#sudo apt-get install ~/Downloads/./docker.deb
+#systemctl --user start docker-desktop
+#systemctl --user enable docker-desktop
 
 # balenaEtcher
-curl -o ~/Downloads/balena.deb https://github.com/balena-io/etcher/releases/download/v1.18.11/balena-etcher_1.18.11_amd64.deb
-sudo apt install ~/Downloads/./balena.deb
+#curl -o ~/Downloads/balena.deb https://github.com/balena-io/etcher/releases/download/v1.18.11/balena-etcher_1.18.11_amd64.deb
+#sudo apt install ~/Downloads/./balena.deb
 
 # Snap
 sudo snap refresh
