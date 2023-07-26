@@ -2,6 +2,7 @@
 # Should Be Main Server
 
 GITHUB="brianlewyn"
+cd ~/Downloads
 
 # Update & Upgrade
 sudo apt update && sudo apt upgrade
@@ -23,29 +24,27 @@ sudo add-apt-repository ppa:phoerious/keepassxc
 sudo apt update
 sudo apt install keepassxc
 
-# VSCode
-#curl -o ~/Downloads/vscode.deb https://code.visualstudio.com/download
-#sudo apt install ~/Downloads/./vscode.deb
+# VSCode (Download DEB package https://code.visualstudio.com/)
+#sudo apt install ./code_<version>_amd64.deb
 
-# Docker
-#sudo apt-get update
-#sudo apt-get install ca-certificates gnupg
-#sudo install -m 0755 -d /etc/apt/keyrings
-#curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-#sudo chmod a+r /etc/apt/keyrings/docker.gpg
-#echo \
-#"deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-#"$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
-#sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-#curl -o ~/Downloads/docker.deb https://desktop.docker.com/linux/main/amd64/docker-desktop-4.21.1-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64
-#sudo apt-get update
-#sudo apt-get install ~/Downloads/./docker.deb
-#systemctl --user start docker-desktop
-#systemctl --user enable docker-desktop
+# Docker (Download DEB package https://docs.docker.com/desktop/install/ubuntu/)
+sudo apt-get update
+sudo apt-get install ca-certificates gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+echo \
+"deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+"$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+curl -o ~/Downloads/docker.deb https://desktop.docker.com/linux/main/amd64/docker-desktop-4.21.1-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64
+sudo apt-get update
+sudo apt-get install ./docker-desktop-<version>-amd64.deb
+systemctl --user start docker-desktop
+systemctl --user enable docker-desktop
 
-# balenaEtcher
-#curl -o ~/Downloads/balena.deb https://github.com/balena-io/etcher/releases/download/v1.18.11/balena-etcher_1.18.11_amd64.deb
-#sudo apt install ~/Downloads/./balena.deb
+# BalenaEtcher (Download DEB package https://github.com/balena-io/etcher)
+sudo apt install ./balena-etcher_<version>_amd64.deb
 
 # Snap
 sudo snap refresh
@@ -78,4 +77,4 @@ sed -i '36s/}/  PS1+="\\n$ "\n}/' ~/.oh-my-bash/themes/rr/rr.theme.sh
 cp ~/.oh-my-bash/templates/bashrc.osh-template ~/.bashrc
 sed -i '12s/font/rr/' ~/.bashrc
 
-echo "script done! now run 'source ~/.bashrc'"
+echo "\nscript done! now run 'source ~/.bashrc'"
