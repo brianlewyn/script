@@ -75,6 +75,9 @@ sed -i '36s/}/  PS1+="\\n$ "\n}/' rr/rr.theme.sh
 cp ~/.oh-my-bash/templates/bashrc.osh-template ~/.bashrc
 sed -i '12s/font/rr/' ~/.bashrc
 
+# EXA
+sudo apt install exa
+
 # Update the .bashrc file
 echo "" >> ~/.bashrc
 echo "# My Alias" >> ~/.bashrc
