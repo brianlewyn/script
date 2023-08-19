@@ -1,4 +1,5 @@
 #!/bin/sh
+# chmod +x alpine.vscode.sh
 USERNAME="brianlewyn"
 GITHUB=$USERNAME
 

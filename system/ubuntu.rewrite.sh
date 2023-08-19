@@ -1,5 +1,6 @@
 #!/bin/sh
 # Should Be Main Server
+# chmod +x ubuntu.sh
 
 GITHUB="brianlewyn"
 cd ~/Downloads

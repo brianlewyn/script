@@ -1,4 +1,5 @@
 #!/bin/bash
+# chmod +x docker.sh
 # alias shdocker="~/./docker.sh"
 
 ARG=$1

@@ -1,4 +1,5 @@
 #!/bin/sh
+# chmod +x alpine.neovim.sh
 USERNAME="brianlewyn"
 GITHUB=$USERNAME
 
