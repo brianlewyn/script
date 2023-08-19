@@ -2,7 +2,7 @@
 
 # save this file as ~/docker.sh 
 # add the alias to ~/.bashrc
-# alias image="~/./docker.sh"
+# alias mydocker="~/./docker.sh"
 
 ARG=$1
 NAME=$2
