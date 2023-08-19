@@ -37,9 +37,9 @@ echo \
 "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
 sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
 #sudo apt-get install ./docker-desktop-<version>-amd64.deb
 systemctl --user start docker-desktop
-systemctl --user enable docker-desktop
 
 # BalenaEtcher (Download DEB package https://github.com/balena-io/etcher)
 #sudo apt install ./balena-etcher_<version>_amd64.deb
@@ -64,7 +64,7 @@ git config --global user.name $GITHUB
 git config --global user.email $GITHUB@gmail.com
 git config --global init.defaultBranch main
 git config --global credential.helper store
-git config --global core.editor nvim
+git config --global core.editor vim
 git config --global core.pager cat
 
 # Oh-My-Bash
