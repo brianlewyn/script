@@ -75,6 +75,12 @@ sed -i '36s/}/  PS1+="\\n$ "\n}/' rr/rr.theme.sh
 cp ~/.oh-my-bash/templates/bashrc.osh-template ~/.bashrc
 sed -i '12s/font/rr/' ~/.bashrc
 
+# Update the .bashrc file
+echo "" >> ~/.bashrc
+echo "# My Alias" >> ~/.bashrc
+echo "alias shdocker=\"~/./docker.sh\"" >> ~/.bashrc
+echo "alias exa=\"exa --icons\"" >> ~/.bashrc
+
 # My-Things
 git clone https://github.com/brianlewyn/share.git ~/.my-things
 cd ~/.my-things/ubuntu && mv .fonts ~ && mv .icons ~ && mv .themes ~
