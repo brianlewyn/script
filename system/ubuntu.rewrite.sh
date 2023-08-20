@@ -1,6 +1,4 @@
 #!/bin/sh
-# bash -c "$(curl -fsSL https://raw.githubusercontent.com/brianlewyn/script/main/system/ubuntu.rewrite.sh)"
-
 # Should Be Main Server
 # chmod +x ubuntu.sh
 
