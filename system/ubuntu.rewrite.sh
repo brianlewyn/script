@@ -1,5 +1,8 @@
 #!/bin/sh
 # Should Be Main Server
+
+# How to download this file
+# curl https://raw.githubusercontent.com/brianlewyn/script/main/system/ubuntu.rewrite.sh -o ubuntu.sh -s
 # chmod +x ubuntu.sh
 
 GITHUB="brianlewyn"
