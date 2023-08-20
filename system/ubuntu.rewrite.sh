@@ -40,7 +40,6 @@ echo \
 sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 #sudo apt-get install ./docker-desktop-<version>-amd64.deb
-systemctl --user start docker-desktop
 
 # BalenaEtcher (Download DEB package https://github.com/balena-io/etcher)
 #sudo apt install ./balena-etcher_<version>_amd64.deb
