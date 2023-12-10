@@ -56,10 +56,6 @@ sudo apt-get update; sudo apt-get install vim
 echo "set number" > ~/.vimrc
 echo "set tabstop=4" >> ~/.vimrc
 
-# Neovim
-sudo add-apt-repository ppa:neovim-ppa/stable
-sudo apt-get update; sudo apt-get install neovim
-
 # Git
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt update; sudo apt install git
